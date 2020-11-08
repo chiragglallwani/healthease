@@ -15,6 +15,10 @@ function App() {
               <Header />
               <Home/>
             </Route>
+            <Route path="/Assessment"> {/*For Quick Assessment*/}
+              <Header />
+              <Assessment/>
+            </Route>
           </Switch>
         </div>
       </Router>
