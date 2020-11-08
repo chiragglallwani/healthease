@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Header.css';
 
 const Header = () => {
     return (
@@ -8,7 +7,7 @@ const Header = () => {
 
             <div className="d-flex pr-5 pl-2">
             <div className="navbar-brand">
-                <Link to="/"  classname="link" style={{ textDecoration: 'none', color: "#FFF"}}>
+                <Link to="/" style={{ textDecoration: 'none', color: "#FFF"}}>
                     <h1 className="healthease">HEALTHEASE</h1>
                 </Link>
                 
@@ -28,7 +27,7 @@ const Header = () => {
                 </div>
 
                 <div className="p-auto">
-                    <Link to="/Covid-Assessment"  style={{ textDecoration: 'none', color: '#FFF' }}>
+                    <Link to="/Assessment"  style={{ textDecoration: 'none', color: '#FFF' }}>
                         <div className="header__option">
                             <h4 className="font-weight-normal" style={{fontSize: "18px"}}>QUICK ASSESSMENT</h4>
                             <h4 className="pl-4 font-weight-normal" style={{fontSize: "18px"}}>FOR COVID-19</h4>
