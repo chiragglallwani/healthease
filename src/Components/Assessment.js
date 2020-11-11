@@ -1,9 +1,13 @@
 import React from 'react'
+import Header from './Header'
 
 const Assessment = () => {
     return (
         <div>
-            <h1>Welcome to Assessment</h1>
+            <Header/>
+            <div>
+                
+            </div>
         </div>
     )
 }

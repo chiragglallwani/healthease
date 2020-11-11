@@ -10,16 +10,8 @@ function App() {
     <div>
       <Router>
         <div>
-          <Switch>
-            <Route path="/"> {/*For Homepage*/}
-              <Header />
-              <Home/>
-            </Route>
-            <Route path="/Assessment"> {/*For Quick Assessment*/}
-              <Header />
-              <Assessment/>
-            </Route>
-          </Switch>
+            <Route path="/" exact component={Home} /> {/*For Homepage*/}
+            <Route path="/Assessment" exact component={Assessment} /> {/*For Quick Assessment*/}
         </div>
       </Router>
            {/* <Home />

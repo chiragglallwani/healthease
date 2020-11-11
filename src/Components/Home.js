@@ -1,10 +1,12 @@
 import React from 'react'
 import Covid1 from '../images/1.jpg'
 import Covid2 from '../images/3.png'
+import Header from './Header'
 
 const Home = () => {
     return (
         <div>
+            <Header/>
          <div className="row my-5 p-4">
             <div className="col bg-secondary col-3 pl-4" style={{borderRadius: "24px"}}>
                 <h3 className="text-center">About Website</h3>
