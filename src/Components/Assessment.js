@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Header from './Header'
-import { Button } from '@material-ui/core';
-import {Modal} from 'react-bootstrap';
-import Dialog1 from './Dialog1';
+import { Button, Dialog } from '@material-ui/core';
+import Dialog1 from './Dialog1'
+import {Modal, Button as ButtonBootstrap} from 'react-bootstrap';
+
 
 const Assessment = () => {
 
@@ -10,19 +11,17 @@ const Assessment = () => {
     const[div3visibility, setdiv3visibility] = useState("invisible");
     const[div4visibility, setdiv4visibility] = useState("invisible");
     const[div5visibility, setdiv5visibility] = useState("invisible");
+    const [show1, setShow1] = useState(false);
 
-    const showDialog1 = () => {
-        return(
-            <Modal>
-                <Modal.Header>Here will be the image and close button</Modal.Header>
-                <Modal.Body>Here will be the message</Modal.Body>
-                <Modal.Footer>Here will be the button for re-assessment</Modal.Footer>
-            </Modal>
-        )
-    }
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = () => setShow1(true);
 
     return (
-        <div>
+        <div> 
+           
+            <Dialog1 show1={show1} handleClose1={handleClose1} setShow1={setShow1} reload={rerender}/>
+
+
             <Header/>
             <div className="d-flex flex-row">
                 <div className="d-flex flex-column align-items-start m-3 mx-5">
@@ -35,14 +34,14 @@ const Assessment = () => {
                                 <li>Having a tough time awakening</li>
                                 <li>Losing consciousness</li>
                             </ul>
-                            <Button onClick={() => {showDialog1(); console.log("onclick worked!")}}
+                            <Button onClick={handleShow1}
                              className="mx-5 my-4 align-content-around" 
                              variant="contained" 
                             style={{maxWidth: "30px", maxHeight: "30px"}}>
                                 Yes
                             </Button>
 
-                            <Button onClick={e => {e.preventDefault(); setdiv2visibility("visible");}}
+                            <Button onClick={e => {setdiv2visibility("visible");}}
                             className="mx-1 my-4 align-content-around" 
                             color="white" variant="contained" 
                             style={{maxWidth: "30px", maxHeight: "30px"}}>
@@ -152,3 +151,26 @@ const Assessment = () => {
 export default Assessment
 
 
+ {/**This is the modal for question 1 */}
+           {/* <Modal show={show1} onHide={handleClose1}>
+                <Modal.Header closeButton>
+                    <span className=" d-flex justify-content-center" style={{marginLeft: "150px"}}>
+                    <img src={Stage1} class=" img-fluid d-block rounded " alt="nurse_image_1" style={{height: "165px"}}/>
+                    </span>
+                    
+                </Modal.Header>
+
+                <Modal.Body className="conatainer-fluid m-auto">
+                    <h4 className="font-weight-bold mx-3">
+                        These symptoms are the sign of coronavirus.
+                        Please call 9-1-1 or call the Emergency 
+                        Department for help!
+                    </h4>
+                </Modal.Body>
+
+                <Modal.Footer className="d-flex justify-content-center mx-auto">
+                    <ButtonBootstrap onClick={redirect} variant="primary" size="lg" active>
+                        Retake Self-Assessment
+                    </ButtonBootstrap>
+                </Modal.Footer>
+    </Modal>*/}

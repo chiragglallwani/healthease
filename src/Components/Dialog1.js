@@ -1,28 +1,38 @@
 import React from 'react'
-import { Button } from '@material-ui/core';
+import {Modal, Button as ButtonBootstrap} from 'react-bootstrap';
+import Stage1 from '../images/nurse level 0.png';
+import Assessment from './Assessment';
 
-const Dialog1 = () => {
+const Dialog1 = ({show1, handleClose1, reload}) => {
+
+     function rerender() {
+        reload();
+    }
+
     return (
-        <div class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        These symptoms are the sign of coronavirus,
+        <div>
+            <Modal show={show1} onHide={handleClose1}>
+                <Modal.Header closeButton>
+                    <span className=" d-flex justify-content-center" style={{marginLeft: "150px"}}>
+                    <img src={Stage1} class=" img-fluid d-block rounded " alt="nurse_image_1" style={{height: "165px"}}/>
+                    </span>
+                    
+                </Modal.Header>
+
+                <Modal.Body className="conatainer-fluid m-auto">
+                    <h4 className="font-weight-bold mx-3">
+                        These symptoms are the sign of coronavirus.
                         Please call 9-1-1 or call the Emergency 
                         Department for help!
-                    </div>
-                    <div class="modal-footer">
-                        <Button class="btn btn-secondary" data-dismiss="modal" variant="contained" color="primary">Retake Self-assessment</Button>
-                        
-                    </div>
-                </div>
-            </div>
+                    </h4>
+                </Modal.Body>
+
+                <Modal.Footer className="d-flex justify-content-center mx-auto">
+                    <ButtonBootstrap onClick={rerender()} variant="primary" size="lg" active>
+                        Retake Self-Assessment
+                    </ButtonBootstrap>
+                </Modal.Footer>
+            </Modal>
         </div>
     )
 }
