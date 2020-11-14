@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header'
-import { Button, Dialog } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import Dialog1 from './Dialog1'
-import {Modal, Button as ButtonBootstrap} from 'react-bootstrap';
+import Dialog2 from './Dialog2';
+import Dialog3 from './Dialog3';
+import Dialog4 from './Dialog4';
+import { render } from '@testing-library/react';
 
 
 const Assessment = () => {
@@ -11,15 +14,37 @@ const Assessment = () => {
     const[div3visibility, setdiv3visibility] = useState("invisible");
     const[div4visibility, setdiv4visibility] = useState("invisible");
     const[div5visibility, setdiv5visibility] = useState("invisible");
-    const [show1, setShow1] = useState(false);
 
+    /*Invoke modal 1 by using below state */
+    const [show1, setShow1] = useState(false);
+    const[showDialog1, setShowDialog1] = useState(true);
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
 
+    /*Invoke modal by using below state */
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
+    /*Invoke modal by using below state */
+    const [show3, setShow3] = useState(false);
+    const handleClose3 = () => setShow3(false);
+    const handleShow3 = () => setShow3(true);
+
+    /*Invoke modal by using below state */
+    const [show4, setShow4] = useState(false);
+    const handleClose4 = () => setShow4(false);
+    const handleShow4 = () => setShow4(true);
+
     return (
         <div> 
+
+            {/*all the modals will invoke based on the state */}
            
-            <Dialog1 show1={show1} handleClose1={handleClose1} setShow1={setShow1} reload={rerender}/>
+            <Dialog1 show1={show1} handleClose1={handleClose1} setShow1={setShow1} />
+            <Dialog2 show2={show2} handleClose2={handleClose2} setShow1={setShow2} />
+            <Dialog3 show3={show3} handleClose3={handleClose3} setShow1={setShow3} />
+            <Dialog4 show4={show4} handleClose4={handleClose4} setShow4={setShow4} />
 
 
             <Header/>
@@ -35,16 +60,16 @@ const Assessment = () => {
                                 <li>Losing consciousness</li>
                             </ul>
                             <Button onClick={handleShow1}
-                             className="mx-5 my-4 align-content-around" 
+                             className="mx-5 my-4 align-content-around font-weight-bold" 
                              variant="contained" 
-                            style={{maxWidth: "30px", maxHeight: "30px"}}>
+                            style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                 Yes
                             </Button>
 
                             <Button onClick={e => {setdiv2visibility("visible");}}
-                            className="mx-1 my-4 align-content-around" 
+                            className="mx-1 my-4 align-content-around font-weight-bold" 
                             color="white" variant="contained" 
-                            style={{maxWidth: "30px", maxHeight: "30px"}}>
+                            style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                 No
                             </Button>
 
@@ -60,16 +85,17 @@ const Assessment = () => {
                                 <li>Difficulty in managing chronic health <br/>
                                     conditions because of difficulty in breathing.</li>
                             </ul>
-                            <Button className="mr-4 my-4 align-content-around" 
+                            <Button onClick={handleShow2}
+                            className="mr-4 my-4 align-content-around font-weight-bold" 
                             color="white" variant="contained" 
-                            style={{maxWidth: "30px", maxHeight: "30px"}}>
+                            style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                 Yes
                             </Button>
 
                             <Button onClick={(e) => {setdiv3visibility("visible"); e.preventDefault();}}
-                             className=" mx-2 my-4 align-content-around" 
+                             className=" mx-2 my-4 align-content-around font-weight-bold" 
                             color="white" variant="contained" 
-                            style={{maxWidth: "30px", maxHeight: "30px"}}>
+                            style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                 No
                             </Button>
                         </div>
@@ -86,17 +112,17 @@ const Assessment = () => {
                                 <br/>Fever includes body temperature  
                                 more than 380 C.
                             </p>
-                            <Button 
-                            className="mx-1 my-4 align-content-around" 
+                            <Button onClick={handleShow3}
+                            className="mx-1 my-4 align-content-around font-weight-bold" 
                             color="white" variant="contained" 
-                            style={{maxWidth: "30px", maxHeight: "30px"}}>
+                            style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                 Yes
                             </Button>
 
                             <Button onClick={(e) => {setdiv4visibility("visible"); e.preventDefault();}}
-                             className="mx-2 my-4 align-content-around" 
+                             className="mx-2 my-4 align-content-around font-weight-bold" 
                             color="white" variant="contained" 
-                            style={{maxWidth: "30px", maxHeight: "30px"}}>
+                            style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                 No
                             </Button>
                         </div>
@@ -111,15 +137,16 @@ const Assessment = () => {
                             <h5 className='font-weight-bold'>In past 14 days, have you
                                 travelled to any other country
                                 outside Canada ?</h5>
-                            <Button className="mx-5 my-4 align-content-around" 
+                            <Button onClick={handleShow3}
+                            className="mx-5 my-4 align-content-around font-weight-bold" 
                                 color="white" variant="contained" 
-                                style={{maxWidth: "30px", maxHeight: "30px"}}>
+                                style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                     Yes
                             </Button>
                             <Button onClick={(e) => {setdiv5visibility("visible"); e.preventDefault();}}
-                            className="mx-1 my-4 align-content-around" 
+                            className="mx-1 my-4 align-content-around font-weight-bold" 
                                 color="white" variant="contained" 
-                                style={{maxWidth: "30px", maxHeight: "30px"}}>
+                                style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                     No
                             </Button>
                         </div>
@@ -129,14 +156,16 @@ const Assessment = () => {
                             <h5 className='font-weight-bold'>Have you ever been in contact
                                 with a person having 
                                 confirm COVID-19?</h5>
-                            <Button className="mx-4 my-4 align-content-around" 
+                            <Button onClick={handleShow3}
+                            className="mx-4 my-4 align-content-around font-weight-bold" 
                                 color="white" variant="contained" 
-                                style={{maxWidth: "30px", maxHeight: "30px"}}>
+                                style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                     Yes
                             </Button>
-                            <Button className="mx-3 my-4 align-content-around" 
+                            <Button onClick={handleShow4}
+                             className="mx-3 my-4 align-content-around font-weight-bold" 
                                 color="white" variant="contained" 
-                                style={{maxWidth: "30px", maxHeight: "30px"}}>
+                                style={{maxWidth: "30px", maxHeight: "30px", backgroundColor: "white"}}>
                                     No
                             </Button>
                         </div>
@@ -149,28 +178,3 @@ const Assessment = () => {
 }
 
 export default Assessment
-
-
- {/**This is the modal for question 1 */}
-           {/* <Modal show={show1} onHide={handleClose1}>
-                <Modal.Header closeButton>
-                    <span className=" d-flex justify-content-center" style={{marginLeft: "150px"}}>
-                    <img src={Stage1} class=" img-fluid d-block rounded " alt="nurse_image_1" style={{height: "165px"}}/>
-                    </span>
-                    
-                </Modal.Header>
-
-                <Modal.Body className="conatainer-fluid m-auto">
-                    <h4 className="font-weight-bold mx-3">
-                        These symptoms are the sign of coronavirus.
-                        Please call 9-1-1 or call the Emergency 
-                        Department for help!
-                    </h4>
-                </Modal.Body>
-
-                <Modal.Footer className="d-flex justify-content-center mx-auto">
-                    <ButtonBootstrap onClick={redirect} variant="primary" size="lg" active>
-                        Retake Self-Assessment
-                    </ButtonBootstrap>
-                </Modal.Footer>
-    </Modal>*/}
