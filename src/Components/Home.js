@@ -8,7 +8,7 @@ const Home = () => {
         <div>
             <Header/>
          <div className="row my-5 p-4">
-            <div className="col bg-secondary col-3 pl-4" style={{borderRadius: "24px"}}>
+            <div className="col col-3 pl-4" style={{borderRadius: "24px", backgroundColor:"#00C6B9 "}}>
                 <h3 className="text-center">About Website</h3>
                 <p style={{fontSize: "20px"}}>HealthEase website provides
                     the free services to the 
@@ -57,12 +57,12 @@ const Home = () => {
 
                 </div>
                 <div className="row pl-3">
-                    <div className="col  bg-secondary col-5 mx-4" style={{borderRadius: "24px"}}>
+                    <div className="col col-5 mx-4" style={{borderRadius: "24px", backgroundColor:"#708E9B"}}>
                         <h3 className="text-center">Quick Assessment</h3>
                         <p style={{fontSize: "20px"}}>This website provides simple and quick assessment features to know the users having a probability of COVID-19 by answering the questions only with YES or NO.</p>
 
                     </div>
-                    <div className="col  bg-secondary col-5 mx-4" style={{borderRadius: "24px", paddingLeft:"15px"}}>
+                    <div className="col col-5 mx-4" style={{borderRadius: "24px", paddingLeft:"15px", backgroundColor:"#D0E1D3"}}>
                         <h3 className="text-center">Find Location</h3>
                         <p style={{fontSize: "20px"}}>
                         This website will also 
@@ -76,7 +76,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="col bg-secondary col-2" style={{borderRadius: "24px"}}>
+            <div className="col col-2" style={{borderRadius: "24px", backgroundColor:"#D0E1D3"}}>
                 <h3 className="text-center">ABOUT US</h3>
                 <p style={{fontSize: "20px"}}>
                 HealthEase website
