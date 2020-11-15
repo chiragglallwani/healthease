@@ -22,7 +22,7 @@ const Dialog2 = ({show2, handleClose2}) => {
                 </Modal.Body>
 
                 <Modal.Footer className="d-flex justify-content-center mx-auto">
-                    <ButtonBootstrap variant="primary" size="lg" active>
+                    <ButtonBootstrap onClick={handleClose2} variant="primary" size="lg" active>
                         Retake Self-Assessment
                     </ButtonBootstrap>
                 </Modal.Footer>

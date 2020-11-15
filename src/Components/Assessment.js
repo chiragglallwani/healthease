@@ -5,7 +5,7 @@ import Dialog1 from './Dialog1'
 import Dialog2 from './Dialog2';
 import Dialog3 from './Dialog3';
 import Dialog4 from './Dialog4';
-import { render } from '@testing-library/react';
+import DoctorAssessment from '../images/Doctor_Assessment.jpg';
 import Footer from './Footer';
 
 
@@ -49,7 +49,13 @@ const Assessment = () => {
 
 
             <Header/>
-            <div className="d-flex flex-row">
+            
+            <div className="d-flex w-50 mx-auto my-2" style={{borderRadius: "15px", padding: "10px", paddingRight:"25px", backgroundColor:"#00CCFF"}}>
+                    <img src={DoctorAssessment} className="img-fluid d-block rounded mx-2" alt="assessment_image" style={{height: "50px"}}/>
+                    <p className="text-center">Answer some of these simple questions and get the feedback from our Quick Assessment</p>
+                </div>
+
+            <div className="d-flex">
                 <div className="d-flex flex-column align-items-start m-3 mx-5">
                     <div className='m-2 mx-5 visible' style={{borderRadius: "15px", padding: "10px", paddingRight:"25px", backgroundColor:"#00CCFF"}}>
                         <h5 className='font-weight-bold'>Are you having any of these following:-</h5>

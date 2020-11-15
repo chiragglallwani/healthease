@@ -3,12 +3,31 @@ import { Link } from 'react-router-dom'
 import Logo from '../images/HealthEaseLogo1.png'
 
 const Header = () => {
+
+    
+    function reloadHome(){
+        window.location.href='/';
+    }
+
+    function reloadAssessment(){
+        window.location.href="/Assessment";
+    }
+
+    function reloadPharmacy(){
+        window.location.href='/FindStoreNearBy';
+    }
+
+    function reloadAboutus(){
+        window.location.href='/AboutUS';
+    }
+
+
     return (
         <div className="d-flex bg-primary sticky-top" style={{height: "120px"}}>
 
             <div className="d-flex pr-5 pl-2">
             <div className="navbar-brand">
-                <Link to="/" style={{ textDecoration: 'none', color: "#FFF"}}>
+                <Link to="/" onClick={reloadHome} style={{ textDecoration: 'none', color: "#FFF"}}>
                     <img src={Logo} className="d-block" style={{width: "420px", height: "115px"}} />
                 </Link>
             </div>
@@ -20,13 +39,13 @@ const Header = () => {
 
 
                 <div className="p-auto">
-                    <Link to="/"  style={{ textDecoration: 'none', color: '#FFF'}}>
+                    <Link to="/" onClick={reloadHome}  style={{ textDecoration: 'none', color: '#FFF'}}>
                         <h4 className="font-weight-normal text-sm-right" style={{fontSize: "18px"}}>HOME</h4>
                     </Link>
                 </div>
 
                 <div className="p-auto">
-                    <Link to="/Assessment"  style={{ textDecoration: 'none', color: '#FFF' }}>
+                    <Link to="/Assessment" onClick={reloadAssessment}  style={{ textDecoration: 'none', color: '#FFF' }}>
                         <div className="header__option">
                             <h4 className="font-weight-normal" style={{fontSize: "18px"}}>QUICK ASSESSMENT</h4>
                             <h4 className="pl-4 font-weight-normal" style={{fontSize: "18px"}}>FOR COVID-19</h4>
@@ -35,7 +54,7 @@ const Header = () => {
                 </div>
 
                 <div className="p-auto">
-                    <Link to="/FindStoreNearBy"  style={{ textDecoration: 'none', color: '#FFF' }}>
+                    <Link to="/FindStoreNearBy" onClick={reloadPharmacy}  style={{ textDecoration: 'none', color: '#FFF' }}>
                         <div className="header__option">
                             <h4 className="font-weight-normal" style={{fontSize: "18px"}}>FIND PHARMACY</h4>
                             <h4 className="pl-5 font-weight-normal" style={{fontSize: "18px"}}>NEARBY</h4>
@@ -44,7 +63,7 @@ const Header = () => {
                 </div>
 
                 <div className="">
-                    <Link to="/AboutUS"  style={{ textDecoration: 'none', color: "#FFF" }}>
+                    <Link to="/AboutUS" onClick={reloadAboutus} style={{ textDecoration: 'none', color: "#FFF" }}>
                         <h4 className="font-weight-normal" style={{fontSize: "18px"}}>ABOUT US</h4>
                     </Link>   
                 </div>
