@@ -15,17 +15,18 @@ const Pharmacy = () => {
                 <div className="bg-primary col-2 my-5 p-2" style={{borderRadius:"25px", marginLeft:"100px"}}>
                     <h2 className="text-center mb-3" style={{color: "white"}}>Find Store Nearby</h2>
                     <h4 className="font-weight-normal m-3"  style={{color: "white"}}>
-                    New to Canada, Here
-                    we have a map to 
-                    checkout the pharmacy
-                    near to your location
-                    or get a various number
-                    of pharmacy around
-                    you, can also see a 
-                    review of the pharmacy 
-                    and find the one where
-                    you can find the required 
-                    medicine.
+                    New to Canada? Zoom out the Google Map to get the nearest 
+                    pharmacy store
+                    at your locations along with their reviews. Find a required <b>COVID First Aid Kit</b> to take precautions for <b>COVID-19.</b>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
                     </h4>
                 </div>
             </div>

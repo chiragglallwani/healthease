@@ -14,9 +14,9 @@ const Home = () => {
         <div>
             <Header/>
          <div className="row my-5 p-4">
-            <div className="col col-3 pl-4" style={{borderRadius: "24px", backgroundColor:"#00C6B9"}}>
-                <h3 className="text-center">About Website</h3>
-                <p className="p-auto" style={{fontSize: "20px"}}>HealthEase website provides
+            <div className="col col-3 pl-4 bg-primary" style={{borderRadius: "24px"}}>
+                <h3 className="text-center" style={{color: "#FFF"}}>About Website</h3>
+                <p className="p-auto" style={{fontSize: "20px", color:"#FFF"}}>HealthEase website provides
                     the free services to the 
                     international students or the
                     visitors in Canada. The main
@@ -26,7 +26,7 @@ const Home = () => {
                     because of increase patient
                     flow during this pandemic.</p>
                     <img src={AboutWebsite} class="d-block w-75 h-auto m-auto" alt="corona__image__1" style={{borderRadius: "25px"}}/>
-                    <p style={{fontSize: "20px"}}>
+                    <p style={{fontSize: "20px", color:"#FFF"}}>
                     However, this website does
                     not provide the test of
                     COVID-19 but with the help
@@ -34,8 +34,9 @@ const Home = () => {
                     Service, it can advice the 
                     patient to take preventive
                     measure to safe itself and 
-                    others.
-                    Note:-  All the assessment 
+                    others.<br/>
+                    <b>
+                    Note:-    </b>  All the assessment 
                     provide my website is for 
                     information purpose only.
                 </p>
@@ -65,18 +66,18 @@ const Home = () => {
 
                 </div>
                 <div className="row pl-3">
-                    <div className="col col-5 mx-4" style={{borderRadius: "24px", backgroundColor:"#00C6B9 "}}>
-                        <h3 className="text-center">Quick Assessment</h3>
+                    <div className="col col-5 mx-4 bg-primary" style={{borderRadius: "24px"}}>
+                        <h3 className="text-center" style={{ color:"#FFF"}}>Quick Assessment</h3>
                         <img src={QuickAssessmentImg} className="d-block w-75 h-auto m-5" alt="corona__image__1" style={{borderRadius: "25px"}}/>
-                        <p style={{fontSize: "20px"}}>
+                        <p style={{fontSize: "20px", color: "#FFF"}}>
                             This website provides simple and quick assessment features to know the users having a 
                             probability of COVID-19 by answering the questions only with YES or NO.</p>
 
                     </div>
-                    <div className="col col-5 mx-4" style={{borderRadius: "24px", paddingLeft:"15px", backgroundColor:"#00C6B9 "}}>
-                        <h3 className="text-center">Find Location</h3>
+                    <div className="col col-5 mx-4 bg-primary" style={{borderRadius: "24px", paddingLeft:"15px"}}>
+                        <h3 className="text-center" style={{color: "#FFF"}}>Find Location</h3>
                         <img src={MapsImg} className="d-block w-75 h-auto m-5" alt="corona__image__1" style={{borderRadius: "25px"}}/>
-                        <p style={{fontSize: "20px"}}>
+                        <p style={{fontSize: "20px", color: "#FFF"}}>
                         This website will also 
                             help the new comers
                             to find the pharmacy 
@@ -88,16 +89,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="col col-2" style={{borderRadius: "24px", backgroundColor:"#00C6B9"}}>
-                <h3 className="text-center">ABOUT US</h3>
-                <p style={{fontSize: "20px"}}>
+            <div className="col col-2 bg-primary" style={{borderRadius: "24px"}}>
+                <h3 className="text-center" style={{color: "#FFF"}}>ABOUT US</h3>
+                <p style={{fontSize: "20px", color: "#FFF"}}>
                 HealthEase website
                 is build by the team
                 name "Innovation
                 SkyLine" consist of
                 team of 3 members.</p>
                 <img src={AboutUs} class="d-block w-75 h-auto my-5 mx-auto" alt="corona__image__1" style={{borderRadius: "25px"}}/>
-                <p style={{fontSize: "20px"}}>
+                <p style={{fontSize: "20px", color: "#FFF"}}>
                 This website specifically
                 target the users who
                 are new to Canada 
