@@ -10,12 +10,12 @@ const AboutUs = () => {
                 <h1 className="mx-5">Team Name: Innovation Skyline</h1>
             </div>
             <div className="row">
-                <h1 className="mx-5">Team Members: Kulrajbir Sandhu, Sneh Patel, Chirag Lalwani</h1>
+                <h1 className="mx-5">Team Members: Kulrajbir Singh Sandhu, Sneh Patel, Chirag Lalwani</h1>
             </div>
             <div className="row">
                 <div className="col-3 mx-5 my-3 bg-primary" style={{borderRadius: "25px"}} >
                     <h2 className="text-center my-2" style={{color: 'white'}}>
-                        Kulrajbir Sandhu
+                        Kulrajbir Singh Sandhu
                     </h2>
                     <h3 className="m-2 font-weight-light" style={{color: 'white'}} >
                     I am 2nd year computer
