@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Logo from '../images/HealthEaseLogo1.png'
 
 const Header = () => {
     return (
@@ -8,10 +9,8 @@ const Header = () => {
             <div className="d-flex pr-5 pl-2">
             <div className="navbar-brand">
                 <Link to="/" style={{ textDecoration: 'none', color: "#FFF"}}>
-                    <h1 className="healthease">HEALTHEASE</h1>
+                    <img src={Logo} className="d-block" style={{width: "420px", height: "115px"}} />
                 </Link>
-                
-                <h3 className='subheader'>Make your Medical Assessment Easy</h3>
             </div>
             </div>
 

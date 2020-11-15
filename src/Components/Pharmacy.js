@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header';
 import GoogleMap from './GoogleMap';
+import Footer from './Footer';
 //import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 const Pharmacy = () => {
@@ -28,6 +29,9 @@ const Pharmacy = () => {
                     </h4>
                 </div>
             </div>
+            <footer className="bg-primary footer" >
+                <Footer/>
+            </footer>
         </div>
     )
 }

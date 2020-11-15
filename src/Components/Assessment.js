@@ -6,6 +6,7 @@ import Dialog2 from './Dialog2';
 import Dialog3 from './Dialog3';
 import Dialog4 from './Dialog4';
 import { render } from '@testing-library/react';
+import Footer from './Footer';
 
 
 const Assessment = () => {
@@ -172,6 +173,9 @@ const Assessment = () => {
                     </div>
                 </div>
             </div>
+            <footer className="bg-primary footer" >
+                <Footer/>
+            </footer>
             
         </div>
     )

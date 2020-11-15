@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer';
 import Header from './Header';
 
 const AboutUs = () => {
@@ -71,6 +72,9 @@ const AboutUs = () => {
 
                 </div>
             </div>
+            <footer className="bg-primary footer" style={{overflow: "hidden"}} >
+                <Footer/>
+            </footer>
         </div>
     )
 }
