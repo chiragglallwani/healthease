@@ -1,6 +1,6 @@
 import React from 'react'
 import Covid1 from '../images/1.jpg'
-import Covid2 from '../images/3.png'
+import Covid2 from '../images/covid vaccine image 2.jpg'
 import Header from './Header'
 import AboutWebsite from '../images/doctor-background-design_1270-62.png';
 import QuickAssessmentImg from '../images/COVID-19_Golden_Rules.png';
