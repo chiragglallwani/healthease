@@ -72,6 +72,25 @@ const AboutUs = () => {
 
                 </div>
             </div>
+            <div className="container py-5">
+                <div className="row mx-5 my-5 bg-primary justify-content-center" style={{borderRadius: "25px"}}>
+                    <h3 className="row mx-5" style={{color: "#FFF", textAlign:"center", justifySelf:"center"}}>Contact Us</h3>
+                    <div className="w-100"></div>
+                    <h4 className="row mx-5" style={{color: "#FFF", textAlign:"center", justifySelf:"center"}}>Address</h4>
+                    <div className="w-100"></div>
+                    <p className="row mx-5" style={{fontSize: "25px", color: "#FFF"}}>
+                        Thompson Rivers University <br/>
+                        805, TRU Way, Kamloops, <br/>
+                        B.C. V2C0C8
+                    </p>
+                    <div className="w-100"></div>
+                    <h4 className="row mx-5" style={{color: "#FFF", textAlign:"center", justifySelf:"center"}}>For Feedback</h4>
+                    <div className="w-100"></div>
+                    <a href="mailto:healthease2407@gmail.com" className="row mx-5 pb-2" style={{fontSize: "25px", color: "#FFF"}}>
+                        healthease2407@gmail.com
+                    </a>
+                </div>
+            </div>
             <footer className="bg-primary footer" style={{overflow: "hidden"}} >
                 <Footer/>
             </footer>

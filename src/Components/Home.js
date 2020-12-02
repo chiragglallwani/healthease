@@ -114,6 +114,21 @@ const Home = () => {
                 </p>
             </div>
             </div>
+            <div className="container">
+                <div className="row mx-5 my-5 bg-primary justify-content-center" style={{borderRadius: "25px"}}>
+                    <h3 className="row mx-5" style={{color: "#FFF", textAlign:"center", justifySelf:"center"}}>For more information</h3>
+                    <div className="w-100"></div>
+                    <p className="row mx-5" style={{fontSize: "25px", color: "#FFF"}}>
+                        To know more about the measure taken by B.C. Goverment <b/> <a className="mx-2" style={{color: "#FFF"}} href="https://news.gov.bc.ca/releases/2020PSSG0046-001568"> Click on me.</a>
+                    </p>
+                    <p className="row mx-5" style={{fontSize: "25px", color: "#FFF"}}>
+                        To know more about the live cases in British Columbia<b/> <a className="mx-2" style={{color: "#FFF"}} href="https://experience.arcgis.com/experience/a6f23959a8b14bfa989e3cda29297ded"> Click on me.</a>
+                    </p>
+                    <p className="row mx-5" style={{fontSize: "25px", color: "#FFF"}}>
+                        To know more about response by the Canada against COVID-19<b/> <a className="mx-2" style={{color: "#FFF"}} href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/canadas-reponse.html"> Click on me.</a>
+                    </p>
+                </div>
+            </div>
             <footer className="bg-primary footer" >
                 <Footer/>
             </footer>
