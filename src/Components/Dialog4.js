@@ -2,6 +2,9 @@ import React from 'react'
 import {Modal} from 'react-bootstrap';
 
 const Dialog4 = ({show4, handleClose4}) => {
+    
+
+    
     return (
         <div>
             <Modal show={show4} onHide={handleClose4}>

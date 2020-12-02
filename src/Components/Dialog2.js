@@ -3,6 +3,11 @@ import {Modal, Button as ButtonBootstrap} from 'react-bootstrap';
 import Stage2 from '../images/doctor level 1.png';
 
 const Dialog2 = ({show2, handleClose2}) => {
+
+    function reloadAssessment(){
+        window.location.href='/Assessment';
+    }
+
     return (
         <div>
             <Modal show={show2} onHide={handleClose2}>
@@ -22,7 +27,7 @@ const Dialog2 = ({show2, handleClose2}) => {
                 </Modal.Body>
 
                 <Modal.Footer className="d-flex justify-content-center mx-auto">
-                    <ButtonBootstrap onClick={handleClose2} variant="primary" size="lg" active>
+                    <ButtonBootstrap onClick={reloadAssessment} variant="primary" size="lg" active>
                         Retake Self-Assessment
                     </ButtonBootstrap>
                 </Modal.Footer>

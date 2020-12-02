@@ -5,6 +5,9 @@ import Stage1 from '../images/nurse level 0.png';
 const Dialog1 = ({show1, handleClose1, dialog}) => {
 
     //const[showDialog, setShowDialog] = useState(false) 
+    function reloadAssessment(){
+        window.location.href='/Assessment';
+    }
 
     return (
         <div>
@@ -25,7 +28,7 @@ const Dialog1 = ({show1, handleClose1, dialog}) => {
                 </Modal.Body>
 
                 <Modal.Footer className="d-flex justify-content-center mx-auto">
-                    <ButtonBootstrap onClick={handleClose1} variant="primary" size="lg" active>
+                    <ButtonBootstrap onClick={reloadAssessment} variant="primary" size="lg" active>
                         Retake Self-Assessment
                     </ButtonBootstrap>
                 </Modal.Footer>
