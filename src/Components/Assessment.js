@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 import { Button } from '@material-ui/core';
 import Dialog1 from './Dialog1'
@@ -18,7 +18,7 @@ const Assessment = () => {
 
     /*Invoke modal 1 by using below state */
     const [show1, setShow1] = useState(false);
-    const[showDialog1, setShowDialog1] = useState(true);
+    //const[showDialog1, setShowDialog1] = useState(true);
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
 

@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Modal, Button as ButtonBootstrap} from 'react-bootstrap';
 import Stage1 from '../images/nurse level 0.png';
 
-const Dialog1 = ({show1, handleClose1, dialog}) => {
+const Dialog1 = ({show1, handleClose1}) => {
 
     //const[showDialog, setShowDialog] = useState(false) 
     function reloadAssessment(){
