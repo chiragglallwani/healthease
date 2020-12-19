@@ -1,9 +1,8 @@
-import React, {Component} from 'react'
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import React from 'react'
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import {
     geocodeByAddress,
-    geocodeByPlaceId,
     getLatLng,
   } from 'react-places-autocomplete';
 
